@@ -1,6 +1,9 @@
 import { Nunito } from "next/font/google";
 
 import Navbar from "./components/navbar/navbar.component";
+import ClientOnly from "./components/ClientOnly";
+// import Model from "./components/models/Model";
+import RegisterModal from "./components/models/RegisterModal";
 
 import "./globals.css";
 
@@ -21,7 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
+        <ClientOnly>
+          {/* <Model actionLabel="Submit" title="Model" isOpen /> */}
+          <RegisterModal />
+          <Navbar />
+        </ClientOnly>
         {children}
       </body>
     </html>
