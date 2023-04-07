@@ -1,3 +1,5 @@
 export default function Home() {
-  return <div>airbnb-clone</div>;
+  return (
+    <div className="text-rose-500 text-2xl">airbnb-clone</div>
+  );
 }
