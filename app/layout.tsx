@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar.component";
 import ClientOnly from "./components/ClientOnly";
 // import Model from "./components/models/Model";
 import RegisterModal from "./components/models/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
+          <ToasterProvider />
           {/* <Model actionLabel="Submit" title="Model" isOpen /> */}
           <RegisterModal />
           <Navbar />
