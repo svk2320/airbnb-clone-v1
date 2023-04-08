@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar.component";
 import ClientOnly from "./components/ClientOnly";
 // import Model from "./components/models/Model";
 import RegisterModal from "./components/models/RegisterModal";
+import LoginModal from "./components/models/LoginModal";
 import ToasterProvider from "./providers/ToasterProvider";
 
 import "./globals.css";
@@ -29,6 +30,7 @@ export default function RootLayout({
           <ToasterProvider />
           {/* <Model actionLabel="Submit" title="Model" isOpen /> */}
           <RegisterModal />
+          <LoginModal />
           <Navbar />
         </ClientOnly>
         {children}
