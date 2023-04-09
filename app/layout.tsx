@@ -2,7 +2,6 @@ import { Nunito } from "next/font/google";
 
 import Navbar from "./components/navbar/navbar.component";
 import ClientOnly from "./components/ClientOnly";
-// import Model from "./components/models/Model";
 import RegisterModal from "./components/models/RegisterModal";
 import LoginModal from "./components/models/LoginModal";
 import ToasterProvider from "./providers/ToasterProvider";
@@ -32,13 +31,14 @@ export default async function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           <ToasterProvider />
-          {/* <Model actionLabel="Submit" title="Model" isOpen /> */}
           <RegisterModal />
           <LoginModal />
           <RentModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
-        {children}
+        <div className="pb-20 pt-28">
+          {children}
+        </div>
       </body>
     </html>
   );
